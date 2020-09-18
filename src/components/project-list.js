@@ -1,7 +1,20 @@
-import React from "React";
+import React from 'react';
+import Project from './project';
+import { projects } from './../data/project-data';
 
-class ProjectList extends Component {
-  render(){
-    
-  }
+export default function ProjectList() {
+  return (
+    <div>
+      {
+        projects.map((project, index) => {
+          return (
+            <Project
+              project={project}
+              index={index}
+            />
+          )
+        })
+      }
+    </div>
+  );
 }
