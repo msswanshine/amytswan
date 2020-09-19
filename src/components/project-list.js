@@ -6,26 +6,36 @@ import mediaQueries from '../utils/media-queries';
 
 export default function ProjectList() {
   return (
-    <ProjectsWrapper>
-      {
-        projects.map((project, index) => {
-          return (
-            <Project
-              project={project}
-              index={index}
-            />
-          )
-        })
-      }
-    </ProjectsWrapper>
+    <Main id="main">
+      <h2>Featured Projects</h2>
+      <ProjectsWrapper>
+        {
+          projects.map((project, index) => {
+            if (project.featured) {
+              return (
+                <Project
+                  project={project}
+                  index={index}
+                />
+              )
+            }
+          })
+        }
+      </ProjectsWrapper>
+    </Main>
   );
 }
+
+const Main = styled.div`
+  text-align: center;
+`;
 
 const ProjectsWrapper = styled.div`
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
+  margin: 0 -1%;
 
   ${mediaQueries.ph`
     flex-direction: row;

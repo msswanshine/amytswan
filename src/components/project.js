@@ -15,6 +15,10 @@ class Project extends React.Component {
         <ImageWrapper>
           <img src={project.image} alt={`${project.name}\'s website`}/>
         </ImageWrapper>
+        <TextWrapper>
+          <h3>{project.name}</h3>
+          <p>{project.role}</p>
+        </TextWrapper>
       </ProjectCard>
     )
   }
@@ -23,18 +27,15 @@ class Project extends React.Component {
 export default Project;
 
 const ProjectCard = styled.div`
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 
   ${mediaQueries.ph`
     flex: 0 1 48%;
-  `}
-
-  ${mediaQueries.md`
-    flex: 1 0 32%;
+    margin: 0 1%;
   `}
 
   ${mediaQueries.lg`
-    flex: 0 1 32%;
+    flex: 0 1 31%;
   `}
 `;
 
@@ -44,4 +45,8 @@ const ImageWrapper = styled.div`
     display: block;
     width: 100%;
   }
+`;
+
+const TextWrapper = styled.div`
+  text-align: center;
 `;
