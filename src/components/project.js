@@ -27,11 +27,11 @@ class Project extends React.Component {
 export default Project;
 
 const ProjectCard = styled.div`
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 
   ${mediaQueries.ph`
     flex: 0 1 48%;
-    margin: 0 1%;
+    margin: 0 1% 40px;
   `}
 
   ${mediaQueries.lg`

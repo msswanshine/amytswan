@@ -121,7 +121,7 @@ export const projects = [
     order: '',
     featured: true,
     name: 'LA Theatre Works',
-    role: 'Frontend Developer',
+    role: 'Frontend Tech Lead',
     teamTotal: '2',
     image: '/images/latw.png',
     stack: ['Drupal 8', 'PHP', 'HTML', 'SASS', 'JavaScript', 'jQuery'],

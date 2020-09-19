@@ -4,7 +4,7 @@ export default function Header() {
   return (
     <header>
       <h1>Amy T. Swan</h1>
-      <p>Musician Gone Coder - Frontend Developer</p>
+      <p>Professional musician turned developer</p>
     </header>
   )
 }

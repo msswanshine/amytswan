@@ -27,7 +27,10 @@ export default function ProjectList() {
 }
 
 const Main = styled.div`
-  text-align: center;
+  margin-top: 60px;
+  h2 {
+    text-align: center;
+  }
 `;
 
 const ProjectsWrapper = styled.div`
