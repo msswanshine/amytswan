@@ -1,8 +1,8 @@
-import React from 'react';
-import Project from './project';
-import { projects } from './../data/project-data';
-import styled from 'styled-components';
-import mediaQueries from '../utils/media-queries';
+import React from "react";
+import styled from "styled-components";
+import Project from "./project";
+import projects from "../data/project-data";
+import mediaQueries from "../utils/media-queries";
 
 export default function ProjectList() {
   return (
@@ -10,16 +10,12 @@ export default function ProjectList() {
       <h2>Featured Projects</h2>
       <ProjectsWrapper>
         {
-          projects.map((project, index) => {
-            if (project.featured) {
-              return (
-                <Project
-                  project={project}
-                  index={index}
-                />
-              )
-            }
-          })
+          projects.map((project, index) => (
+            <Project
+              project={project}
+              index={index}
+            />
+          ))
         }
       </ProjectsWrapper>
     </Main>
