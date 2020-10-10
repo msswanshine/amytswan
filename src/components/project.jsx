@@ -1,23 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import { object, number } from "prop-types";
 
 import styled from "styled-components";
 import mediaQueries from "../utils/media-queries";
 
-function Project({
-  project, index,
-}) {
+function Project({ project, index }) {
+  const [isActive, setIsActive] = useState(false);
+
+  const toggleClass = () => setIsActive(!isActive);
+
   return (
     <ProjectCard
       key={index}
+      onClick={toggleClass}
     >
-      <ImageWrapper>
+      <ImageWrapper className={isActive ? "active" : ""}>
         <div className="flip-card-inner">
           <div className="flip-card-front">
             <img src={project.image} alt={`${project.name}'s website`} />
           </div>
           <div className="flip-card-back">
-            {project.description}
+            {project.about}
           </div>
         </div>
       </ImageWrapper>
@@ -38,6 +41,7 @@ export default Project;
 
 const ProjectCard = styled.div`
   margin-bottom: 20px;
+  perspective: 1000px;
 
   ${mediaQueries.ph`
     flex: 0 1 48%;
@@ -50,9 +54,7 @@ const ProjectCard = styled.div`
 `;
 
 const ImageWrapper = styled.div`
-  border: 2px solid #e9e9e9;
   border-radius: 10px;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   cursor: pointer;
 
   img {
@@ -61,18 +63,23 @@ const ImageWrapper = styled.div`
   }
 
   .flip-card-inner {
-    position: relative;
-    width: 100%;
     height: 100%;
     transition: transform 0.6s;
     transform-style: preserve-3d;
+    width: 100%;
+  }
+
+  &.active .flip-card-inner {
+    transform: rotateY(180deg);
   }
 
   .flip-card-front, .flip-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     backface-visibility: hidden;
+    height: 100%;
+    overflow: hidden;
+    width: 100%;
   }
 
   .flip-card-front {
@@ -83,6 +90,8 @@ const ImageWrapper = styled.div`
   .flip-card-back {
     background-color: #61639e;
     color: white;
+    position: absolute;
+    top: 0;
     transform: rotateY(180deg);
   }
 `;

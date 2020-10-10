@@ -7,7 +7,7 @@ import mediaQueries from "../utils/media-queries";
 export default function ProjectList() {
   return (
     <Main id="main">
-      <h2>Featured Projects</h2>
+      <h2>Projects</h2>
       <ProjectsWrapper>
         {
           projects.map((project, index) => (
