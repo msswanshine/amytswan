@@ -83,7 +83,6 @@ const ImageWrapper = styled.div`
   }
 
   .flip-card-front {
-    background-color: #dcd060;
     color: black;
   }
 
