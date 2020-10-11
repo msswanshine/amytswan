@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { shape, string } from 'prop-types';
+import { string } from 'prop-types';
 import sliderWrapper from './style';
 import SliderContent from '../slider-content/slider-content';
 import Slide from '../slide/slide';
 import Arrow from '../arrow/arrow';
 
-const Slider = ({ slides }) => {
+const Slider = ({ projects }) => {
   const getWidth = () => window.innerWidth;
 
   const [state, setState] = useState({
@@ -17,7 +17,7 @@ const Slider = ({ slides }) => {
   const { translate, transition, activeIndex } = state;
 
   const nextSlide = () => {
-    if (activeIndex === slides.length - 1) {
+    if (activeIndex === projects.length - 1) {
       return setState({
         ...state,
         translate: 0,
@@ -35,8 +35,8 @@ const Slider = ({ slides }) => {
     if (activeIndex === 0) {
       return setState({
         ...state,
-        translate: (slides.length - 1) * getWidth(),
-        activeIndex: slides.length - 1,
+        translate: (projects.length - 1) * getWidth(),
+        activeIndex: projects.length - 1,
       });
     }
 
@@ -55,12 +55,12 @@ const Slider = ({ slides }) => {
         className="slider-content"
         translate={translate}
         transition={transition}
-        width={getWidth() * slides.length}
+        width={getWidth() * projects.length}
       >
-        {slides.map((slide) => (
+        {projects.map((project) => (
           <Slide
-            key={slide.id}
-            content={slide}
+            key={project.id}
+            project={project}
           />
         ))}
       </SliderContent>
@@ -71,13 +71,11 @@ const Slider = ({ slides }) => {
 };
 
 Slider.propTypes = {
-  slides: shape({
-    image: string.isRequired,
-  }),
+  projects: string,
 };
 
 Slider.defaultProps = {
-  slides: [{ image: '' }],
+  projects: '',
 };
 
 export default Slider;
