@@ -6,7 +6,7 @@ import Slide from '../slide/slide';
 import Arrow from '../arrow/arrow';
 
 const Slider = ({ projects }) => {
-  const getWidth = () => window.innerWidth;
+  const getWidth = () => window.innerWidth * 0.275;
 
   const [state, setState] = useState({
     activeIndex: 0,

@@ -11,12 +11,12 @@ const Arrow = ({ direction, handleClick }) => (
     className={css`
     display: flex;
     position: absolute;
-    top: 50%;
-    ${direction === 'right' ? 'right: 25px' : 'left: 25px'};
+    top: calc(50% - 25px);
+    ${direction === 'right' ? 'right: 6px' : 'left: 6px'};
     height: 50px;
     width: 50px;
     justify-content: center;
-    background: white;
+    background: rgba(143, 136, 142, 0.8);
     border: none;
     border-radius: 50%;
     cursor: pointer;

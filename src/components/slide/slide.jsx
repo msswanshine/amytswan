@@ -16,15 +16,19 @@ function Slide({ project }) {
         <div className="flip-card-inner">
           <div className="flip-card-front">
             <img src={project.image} alt={`${project.name}'s website`} />
+            <div className="card-overlay">
+              <div className="text-wrapper">
+                <h2>{project.name}</h2>
+                <p>{project.role}</p>
+              </div>
+            </div>
           </div>
           <div className="flip-card-back">
-            {project.about}
+            <div className="text-wrapper">
+              {project.about}
+            </div>
           </div>
         </div>
-      </div>
-      <div>
-        <h3>{project.name}</h3>
-        <p>{project.role}</p>
       </div>
     </div>
   );
