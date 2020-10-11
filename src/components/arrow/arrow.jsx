@@ -1,8 +1,8 @@
 import React from 'react';
 import { css } from 'emotion';
 import { string, func } from 'prop-types';
-import leftArrow from '../../../public/images/pngs/arrow-left.svg';
-import rightArrow from '../../../public/images/pngs/arrow-right.svg';
+import ArrowLeft from './arrow-left';
+import ArrowRight from './arrow-right';
 
 const Arrow = ({ direction, handleClick }) => (
   <button
@@ -33,7 +33,7 @@ const Arrow = ({ direction, handleClick }) => (
     }
   `}
   >
-    {direction === 'right' ? rightArrow : leftArrow }
+    {direction === 'right' ? <ArrowRight /> : <ArrowLeft /> }
   </button>
 );
 
