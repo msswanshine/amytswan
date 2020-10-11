@@ -1,11 +1,13 @@
 import React from 'react';
 
-let currentYear = new Date().getFullYear()
+const currentYear = new Date().getFullYear();
 
-export default function Footer() {
+function Footer() {
   return (
     <footer>
       {`©${currentYear} Amy T. Swan `}
     </footer>
-  )
+  );
 }
+
+export default Footer;

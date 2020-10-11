@@ -77,7 +77,7 @@ const slideItem = css`
       transform: rotateY(180deg);
 
       .text-wrapper {
-        padding: 16px;
+        padding: 20px;
       }
     }
   }
