@@ -4,6 +4,7 @@ import sliderWrapper from './style';
 import SliderContent from '../slider-content/slider-content';
 import Slide from '../slide/slide';
 import Arrow from '../arrow/arrow';
+import Dots from '../dots';
 
 const Slider = ({ projects }) => {
   const getWidth = () => window.innerWidth * 0.275;
@@ -66,6 +67,8 @@ const Slider = ({ projects }) => {
       </SliderContent>
       <Arrow direction="left" handleClick={prevSlide} />
       <Arrow direction="right" handleClick={nextSlide} />
+
+      <Dots projects={projects} activeIndex={activeIndex} />
     </div>
   );
 };

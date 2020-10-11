@@ -2,7 +2,7 @@ import { css } from 'emotion';
 
 const slideItem = css`
   height: 100%;
-  margin: 0 16px;
+  margin: 8px 16px;
   min-width: 288px;
 
   .image-wrapper {
