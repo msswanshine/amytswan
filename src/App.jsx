@@ -2,8 +2,9 @@ import React from 'react';
 import { hot } from 'react-hot-loader';
 
 import Header from './components/header';
-import ProjectList from './components/project-list';
+import Slider from './components/slider/slider';
 import Footer from './components/footer';
+import projects from './data/project-data';
 
 import './App.css';
 
@@ -11,7 +12,9 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <ProjectList />
+      <Slider
+        projects={projects}
+      />
       <Footer />
     </div>
   );

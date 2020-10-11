@@ -1,17 +1,18 @@
 import React, { useState } from 'react';
 import { shape, string } from 'prop-types';
-import SlideItem from './style';
+import slideItem from './style';
 
 function Slide({ project }) {
   const [isActive, setIsActive] = useState(false);
   const toggleClass = () => setIsActive(!isActive);
 
   return (
-    <SlideItem
-      className="slide-item"
-      onClick={() => toggleClass}
+    <div
+      className={`slide-item ${slideItem}`}
+      onClick={toggleClass}
+      role="button"
     >
-      <div className={isActive ? 'active' : ''}>
+      <div className={`image-wrapper ${isActive ? 'active' : ''}`}>
         <div className="flip-card-inner">
           <div className="flip-card-front">
             <img src={project.image} alt={`${project.name}'s website`} />
@@ -25,7 +26,7 @@ function Slide({ project }) {
         <h3>{project.name}</h3>
         <p>{project.role}</p>
       </div>
-    </SlideItem>
+    </div>
   );
 }
 
