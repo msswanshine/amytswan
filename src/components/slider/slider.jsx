@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import styled from 'styled-components';
 import { shape, string } from 'prop-types';
-import SliderContent from './slider-content';
-import Slide from './slide';
-import Arrow from './arrow';
+import sliderWrapper from './style';
+import SliderContent from '../slider-content/slider-content';
+import Slide from '../slide/slide';
+import Arrow from '../arrow/arrow';
 
 const Slider = ({ slides }) => {
   const getWidth = () => window.innerWidth;
@@ -24,7 +24,6 @@ const Slider = ({ slides }) => {
         activeIndex: 0,
       });
     }
-
     setState({
       ...state,
       activeIndex: activeIndex + 1,
@@ -33,7 +32,6 @@ const Slider = ({ slides }) => {
   };
 
   const prevSlide = () => {
-    debugger;
     if (activeIndex === 0) {
       return setState({
         ...state,
@@ -50,8 +48,11 @@ const Slider = ({ slides }) => {
   };
 
   return (
-    <SliderWrapper>
+    <div
+      className={`slider-wrapper ${sliderWrapper}`}
+    >
       <SliderContent
+        className="slider-content"
         translate={translate}
         transition={transition}
         width={getWidth() * slides.length}
@@ -65,7 +66,7 @@ const Slider = ({ slides }) => {
       </SliderContent>
       <Arrow direction="left" handleClick={prevSlide} />
       <Arrow direction="right" handleClick={nextSlide} />
-    </SliderWrapper>
+    </div>
   );
 };
 
@@ -76,15 +77,7 @@ Slider.propTypes = {
 };
 
 Slider.defaultProps = {
-  slides: [{ image: 'https://images.unsplash.com/photo-1449034446853-66c86144b0ad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80' }],
+  slides: [{ image: '' }],
 };
-
-const SliderWrapper = styled.div`
-  position: relative;
-  height: 800px;
-  width: 100vw;
-  margin: 0 auto;
-  overflow: hidden;
-`;
 
 export default Slider;

@@ -1,20 +1,15 @@
 import React from 'react';
 import { string } from 'prop-types';
-import styled from 'styled-components';
+import slideItem from './style';
 
 const Slide = ({ content }) => (
-  <SlideItem>
+  <div className={slideItem}>
     <img src={content} alt="slide of something" />
-  </SlideItem>
+  </div>
 );
 
 Slide.propTypes = {
   content: string.isRequired,
 };
-
-const SlideItem = styled.div`
-  height: 100%;
-  width: 100%;
-`;
 
 export default Slide;

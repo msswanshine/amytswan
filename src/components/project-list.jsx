@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Project from './project';
 import projects from '../data/project-data';
-import Slider from './slider';
+import Slider from './slider/slider';
 import mediaQueries from '../utils/media-queries';
 
 const images = [

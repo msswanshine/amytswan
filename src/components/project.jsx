@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { object, number } from 'prop-types';
+import { shape, string, number } from 'prop-types';
 
 import styled from 'styled-components';
 import mediaQueries from '../utils/media-queries';
@@ -34,7 +34,19 @@ function Project({ project, index }) {
 
 Project.propTypes = {
   index: number.isRequired,
-  project: object.isRequired,
+  project: shape({
+    name: string.isRequired,
+    image: string.isRequired,
+    about: string.isRequired,
+  }),
+};
+
+Project.defaultProps = {
+  project: [{
+    name: '',
+    image: '',
+    about: '',
+  }],
 };
 
 export default Project;
