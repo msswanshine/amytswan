@@ -8,6 +8,7 @@ const Arrow = ({ direction, handleClick }) => (
   <button
     type="button"
     onClick={handleClick}
+    aria-label={`${direction === 'right' ? 'Next slide' : 'Previous slide'}`}
     className={css`
     display: flex;
     position: absolute;
