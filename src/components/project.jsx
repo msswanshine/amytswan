@@ -1,8 +1,8 @@
-import React, { useState } from "react";
-import { object, number } from "prop-types";
+import React, { useState } from 'react';
+import { object, number } from 'prop-types';
 
-import styled from "styled-components";
-import mediaQueries from "../utils/media-queries";
+import styled from 'styled-components';
+import mediaQueries from '../utils/media-queries';
 
 function Project({ project, index }) {
   const [isActive, setIsActive] = useState(false);
@@ -14,7 +14,7 @@ function Project({ project, index }) {
       key={index}
       onClick={toggleClass}
     >
-      <ImageWrapper className={isActive ? "active" : ""}>
+      <ImageWrapper className={isActive ? 'active' : ''}>
         <div className="flip-card-inner">
           <div className="flip-card-front">
             <img src={project.image} alt={`${project.name}'s website`} />

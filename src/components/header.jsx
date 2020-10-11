@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 export default function Header() {
   return (
@@ -10,6 +10,7 @@ export default function Header() {
         to
         <span role="img" aria-label="code"> 💻 </span>
       </p>
+
     </header>
   );
 }

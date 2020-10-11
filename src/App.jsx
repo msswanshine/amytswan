@@ -1,11 +1,11 @@
-import React from "react";
-import { hot } from "react-hot-loader";
+import React from 'react';
+import { hot } from 'react-hot-loader';
 
-import Header from "./components/header";
-import ProjectList from "./components/project-list";
-import Footer from "./components/footer";
+import Header from './components/header';
+import ProjectList from './components/project-list';
+import Footer from './components/footer';
 
-import "./App.css";
+import './App.css';
 
 function App() {
   return (

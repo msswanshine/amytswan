@@ -1,5 +1,3 @@
-const { resolve } = require('path');
-
 module.exports = {
   env: {
     browser: true,
@@ -20,7 +18,7 @@ module.exports = {
     'react',
   ],
   rules: {
-    "semi": ["error", "always"],
-    "quotes": ["error", "double"]
+    semi: ['error', 'always'],
+    quotes: ['error', 'single'],
   },
 };

@@ -1,8 +1,8 @@
-import React from "react";
-import styled from "styled-components";
-import Project from "./project";
-import projects from "../data/project-data";
-import mediaQueries from "../utils/media-queries";
+import React from 'react';
+import styled from 'styled-components';
+import Project from './project';
+import projects from '../data/project-data';
+import mediaQueries from '../utils/media-queries';
 
 export default function ProjectList() {
   return (
