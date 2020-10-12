@@ -25,7 +25,8 @@ function Slide({ project }) {
           </div>
           <div className="flip-card-back">
             <div className="text-wrapper">
-              {project.about}
+              <p>{project.about}</p>
+              <a href={project.website} rel="noreferrer" target="_blank">{`Visit ${project.name}`}</a>
             </div>
           </div>
         </div>
@@ -39,6 +40,7 @@ Slide.propTypes = {
     name: string.isRequired,
     image: string.isRequired,
     about: string.isRequired,
+    website: string.isRequired,
   }),
 };
 
@@ -47,6 +49,7 @@ Slide.defaultProps = {
     name: '',
     image: '',
     about: '',
+    website: '',
   },
 };
 

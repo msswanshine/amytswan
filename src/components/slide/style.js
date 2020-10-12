@@ -77,6 +77,23 @@ const slideItem = css`
 
       .text-wrapper {
         padding: 20px;
+
+        a {
+          color: #ffffff;
+          border: 1px solid #ffffff;
+          border-radius: 5px;
+          display: inline-block;
+          margin: 10px 0;
+          padding: 10px 16px;
+          text-decoration: none;
+          transition: background-color 0.3s;
+
+          &:focus,
+          &:hover {
+            background-color: #ffffff;
+            color: #2e3540;
+          }
+        }
       }
     }
   }
