@@ -7,7 +7,6 @@ const Dot = ({ active }) => (
     className={css`
       padding: 6px;
       margin-right: 5px;
-      cursor: pointer;
       border-radius: 50%;
       background: ${active ? '#2e3540' : '#8f888e'};
       transition: background 0.3s;

@@ -3,7 +3,6 @@ import { css } from 'emotion';
 const slideItem = css`
   height: 100%;
   margin: 8px 16px;
-  min-width: 288px;
 
   .image-wrapper {
     border-radius: 10px;
@@ -67,7 +66,7 @@ const slideItem = css`
     }
 
     .flip-card-back {
-      background-color: #8082c2;
+      background-color: #2e3540;
       bottom: 0;
       color: white;
       left: 0;

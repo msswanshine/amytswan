@@ -1,4 +1,4 @@
-import { css } from 'styled-components';
+import { css } from 'emotion';
 
 const sizes = {
   sm: 0,

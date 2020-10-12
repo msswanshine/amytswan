@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { string } from 'prop-types';
 import sliderWrapper from './style';
 import SliderContent from '../slider-content/slider-content';
@@ -8,6 +8,7 @@ import Dots from '../dots';
 
 const Slider = ({ projects }) => {
   const getWidth = () => window.innerWidth * 0.275;
+  const resizeRef = useRef;
 
   const [state, setState] = useState({
     activeIndex: 0,
@@ -16,6 +17,26 @@ const Slider = ({ projects }) => {
   });
 
   const { translate, transition, activeIndex } = state;
+
+  const handleResize = () => {
+    setState({ ...state, translate: getWidth(), transition: 0 });
+  };
+
+  useEffect(() => {
+    resizeRef.current = handleResize;
+  });
+
+  useEffect(() => {
+    const resize = () => {
+      resizeRef.current();
+    };
+
+    const onResize = window.addEventListener('resize', resize);
+
+    return () => {
+      window.removeEventListener('resize', onResize);
+    };
+  }, []);
 
   const nextSlide = () => {
     if (activeIndex === projects.length - 1) {
