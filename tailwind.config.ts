@@ -7,10 +7,11 @@ export default {
       colors: {
         black: "#000000",
         white: "#FFFFFF",
-        gray: "#808080",
+        gray: "#505050",
         blue: "#4A90E2",
         purple: "#9013FE",
-        green: "#13FE90"
+        green: "#13FE90",
+        gold: "#D4AF37"
       },
     },
   },

@@ -18,7 +18,7 @@ export default function HeaderMenu({
 			className={`fixed inset-0 overflow-hidden transition-all duration-700 ease-in-out z-20
 				${isOpen ? 'opacity-95 pointer-events-auto' : 'opacity-0 pointer-events-none'}`} 
 			style={{ 
-				background: 'radial-gradient(74.32% 100% at 50% 100%, #4A90E2  0%, #9013FE 100%)',
+				background: 'linear-gradient(to bottom right, #4A90E2 0%, #D4AF37 100%)',
 				position: 'fixed',
 				top: 0,
 				left: 0,
