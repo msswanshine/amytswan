@@ -12,19 +12,19 @@ export default function Hero() {
 					<div className="px-4 md:px-10 h-full">
 						<div className="flex flex-col sm:flex-row items-center justify-center sm:justify-between gap-4 sm:gap-10 h-full">
 							<div className="basis-full sm:basis-1/2 content-center sm:items-start">
-							<h1 className="text-white text-3xl sm:text-5xl font-bold mb-10">
-								{`Hi, I'm Amy.`}
-							</h1>
-							<h2 className="text-white text-xl sm:text-3xl font-bold">
-								{`I'm a Technical Lead & Front-End Web Developer based in Ashland, Oregon. My experience spans from startups to industry giants like Apple and McKinsey.`}
-							</h2>
-						</div>
-						<div className="basis-full sm:basis-1/2">	
-							<img 
-								src="/images/thailand_headshot.webp" 
-								alt="Amy Swan, wearing a sunhat and a big smile, at an ornate temple in Thailand." 
-								className="w-full h-full object-cover max-h-[450px] sm:max-h-[720px] rounded-2xl -mt-20 sm:mt-0" 
-								/>
+								<h1 className="text-white text-3xl sm:text-5xl font-bold mb-10">
+									{`Hi, I'm Amy.`}
+								</h1>
+								<h2 className="text-white text-xl sm:text-3xl font-bold">
+									{`I'm a Technical Lead & Front-End Web Developer based in Ashland, Oregon. My experience spans from startups to industry giants like Apple and McKinsey.`}
+								</h2>
+							</div>
+							<div className="basis-full sm:basis-1/2">	
+								<img 
+									src="/images/thailand_headshot.webp" 
+									alt="Amy Swan, wearing a sunhat and a big smile, at an ornate temple in Thailand." 
+									className="w-full h-full object-cover max-h-[450px] sm:max-h-[720px] rounded-2xl -mt-20 sm:mt-0" 
+									/>
 							</div>
 						</div>
 					</div>
