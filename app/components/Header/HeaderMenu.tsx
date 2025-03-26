@@ -59,14 +59,14 @@ export default function HeaderMenu({
 const menuItems = [
 	{
 		label: "About",
-		href: "/about",
+		href: "#about",
 	},
 	{
 		label: "What I Do",
-		href: "/what-i-do",
+		href: "#what-i-do",
 	},
 	{
 		label: "Contact Me",
-		href: "/contact",
+		href: "#contact",
 	},
 ];

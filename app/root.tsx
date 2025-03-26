@@ -10,11 +10,13 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 
+import flickityStyles from "flickity/css/flickity.css";
+import stylesheet from "./tailwind.css";
 import { getUser } from "~/session.server";
-import stylesheet from "~/tailwind.css";
 
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: stylesheet },
+  { rel: "stylesheet", href: flickityStyles },
   ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
 ];
 

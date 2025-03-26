@@ -23,7 +23,7 @@ export default function Hero() {
 								<img 
 									src="/images/thailand_headshot.webp" 
 									alt="Amy Swan, wearing a sunhat and a big smile, at an ornate temple in Thailand." 
-									className="w-full h-full object-cover max-h-[450px] sm:max-h-[720px] rounded-2xl -mt-20 sm:mt-0" 
+									className="w-full h-full object-cover max-h-[450px] sm:max-h-[720px] rounded-2xl -mt-20 sm:mt-0 shadow-xl" 
 									/>
 							</div>
 						</div>
