@@ -135,7 +135,8 @@ function Slide({slide, isActive}: {slide: Slide, isActive: boolean}) {
 					isActive ? 'opacity-0' : 'opacity-100'
 				} bg-neutral-950`}></div>
 				<div className="relative w-full pb-[70.25%]"> {/* 56.25% = 9/16 */}
-					<div aria-hidden="true" className="absolute top-0 left-0 w-full h-full bg-neutral-800">{slide.title}</div>
+					<div className="sr-only text-white">{slide.title}</div>
+
 					{/* TODO: Add the video back in. Accessibility Lighthouse score will be at 100% when it's in. */}
 					{/* <iframe
 							className="absolute top-0 left-0 w-full h-full"
